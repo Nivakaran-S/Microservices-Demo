@@ -1,0 +1,52 @@
+{
+  "realm": "spring-boot-microservices-realm",
+  "enabled": true,
+  "sslRequired": "external",
+  "registrationAllowed": true,
+  "users": [
+    {
+      "username": "admin",
+      "enabled": true,
+      "emailVerified": true,
+      "credentials": [
+        {
+          "type": "password",
+          "value": "admin",
+          "temporary": false
+        }
+      ],
+      "realmRoles": ["admin"]
+    }
+  ],
+  "roles": {
+    "realm": [
+      {
+        "name": "admin",
+        "description": "Administrator role with full privileges"
+      },
+      {
+        "name": "user",
+        "description": "Regular user role"
+      }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "api-gateway",
+      "enabled": true,
+      "publicClient": false,
+      "protocol": "openid-connect",
+      "redirectUris": ["*"],
+      "defaultRoles": ["user"],
+      "clientAuthenticatorType": "client-secret",
+      "secret": "api-gateway-secret"
+    }
+  ],
+  "clientScopes": [
+    {
+      "name": "role_list",
+      "protocol": "openid-connect",
+      "attributes": {}
+    }
+  ]
+}

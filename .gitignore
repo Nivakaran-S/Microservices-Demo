@@ -1,0 +1,35 @@
+# Socket files
+mysql_keycloak_data/mysql.sock
+
+# Database data directories
+mongo-data/
+mysql_keycloak_data/
+postgres-inventory/
+postgres-order/
+
+# IDE and editor files
+.idea/
+*.iml
+.vscode/
+
+# Build and runtime files
+*.log
+target/
+build/
+*.class
+*.jar
+*.war
+*.ear
+
+# Gradle build files
+.gradle/
+build.gradle.lockfile
+gradle/wrapper/gradle-wrapper.jar
+
+# Docker-related files
+docker-compose.yml.bak
+*.env
+
+# OS-generated files
+.DS_Store
+Thumbs.db
